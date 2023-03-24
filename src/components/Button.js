@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import "components/Button.scss";
 import classNames from "classnames";
