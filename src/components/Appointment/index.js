@@ -5,7 +5,7 @@ import Show from "./Show";
 import Empty from "./Empty";
 import Form from "./Form";
 import { useVisualMode } from "hooks/useVisualMode";
-import { useEffect } from "react";
+
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
@@ -14,17 +14,6 @@ export default function Appointment(props) {
   const { mode, transition, back } = useVisualMode(
     props.interview ? SHOW : EMPTY
   );
-  useEffect(() => {
-    
-    if (props.interview && mode === EMPTY) {
-      transition(SHOW);
-    }
-    
-    if (!props.interview && mode === SHOW) {
-      transition(EMPTY);
-    }
-
-  }, [mode, transition, props.interview])
 
   return (<article className="appointment">
     <Header time={props.time} />
@@ -41,7 +30,7 @@ export default function Appointment(props) {
         <Form
           name={props.name}
           value={props.value}
-          interviewers={[]}
+          interviewers={props.interviewers}
           onCancel={back}
         />}
 
