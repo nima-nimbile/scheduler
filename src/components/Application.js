@@ -6,7 +6,7 @@ import Appointment from "components/Appointment";
 import useApplicationData from "hooks/useApplicationData";
 import { getAppointmentsForDay, getInterview, getInterviewersForDay } from "helpers/selectors";
 
-
+// ...............................................................................................
 export default function Application(props) {
 
   const {
@@ -34,7 +34,6 @@ export default function Application(props) {
       />
     );
   });
-
   return (
     <main className="layout">
       <section className="sidebar">
@@ -65,3 +64,4 @@ export default function Application(props) {
     </main>
   );
 }
+// ...............................................................................................

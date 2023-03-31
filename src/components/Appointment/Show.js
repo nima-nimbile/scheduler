@@ -1,6 +1,6 @@
 import React from "react";
 
-
+// ...............................................................................................
 export default function Show(props) {
   return (
     <main className="appointment__card appointment__card--show">
@@ -30,3 +30,4 @@ export default function Show(props) {
     </main>
   )
 }
+// ...............................................................................................
