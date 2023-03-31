@@ -13,21 +13,33 @@ describe("Form", () => {
       avatar: "https://i.imgur.com/LpaY82x.png"
     }
   ];
+<<<<<<< HEAD
   // ........................................................................................
+=======
+// ........................................................................................
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
   it("renders without student name if not provided", () => {
     const { getByPlaceholderText } = render(
       <Form interviewers={interviewers} />
     );
     expect(getByPlaceholderText("Enter Student Name")).toHaveValue("");
   });
+<<<<<<< HEAD
   // ........................................................................................
+=======
+// ........................................................................................
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
   it("renders with initial student name", () => {
     const { getByTestId } = render(
       <Form interviewers={interviewers} name="Lydia Miller-Jones" />
     );
     expect(getByTestId("student-name-input")).toHaveValue("Lydia Miller-Jones");
   });
+<<<<<<< HEAD
   // ........................................................................................
+=======
+// ........................................................................................
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
   it("validates that the student name is not blank", () => {
     const onSave = jest.fn();
     const { getByText } = render(
@@ -39,7 +51,11 @@ describe("Form", () => {
     expect(getByText(/student name cannot be blank/i)).toBeInTheDocument();
     expect(onSave).not.toHaveBeenCalled();
   });
+<<<<<<< HEAD
   // ........................................................................................
+=======
+// ........................................................................................
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
   it("can successfully save after trying to submit an empty student name", () => {
     const onSave = jest.fn();
     const { getByText, getByPlaceholderText, queryByText } = render(
@@ -62,7 +78,11 @@ describe("Form", () => {
     expect(onSave).toHaveBeenCalledTimes(1);
     expect(onSave).toHaveBeenCalledWith("Lydia Miller-Jones", 1);
   });
+<<<<<<< HEAD
   // ........................................................................................
+=======
+// ........................................................................................
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
   it("calls onCancel and resets the input field", () => {
     const onCancel = jest.fn();
     const { getByText, getByPlaceholderText, queryByText } = render(

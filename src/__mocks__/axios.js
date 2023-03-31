@@ -1,5 +1,9 @@
 const { default: Axios } = require("axios");
+<<<<<<< HEAD
 // ..............................................................................fixtures
+=======
+
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
 const fixtures = {
   days: [
     {
@@ -57,7 +61,11 @@ const fixtures = {
 // ..............................................................................url
 export default {
   get: jest.fn(url => {
+<<<<<<< HEAD
 
+=======
+   
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
     if (url === "/api/days") {
       return Promise.resolve({
         status: 200,
@@ -65,16 +73,27 @@ export default {
         data: fixtures.days
       });
     }
+<<<<<<< HEAD
  // ..............................................................................appointments
+=======
+
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
     if (url === "/api/appointments") {
       /* Resolve appointments data */
       return Promise.resolve({
         status: 200,
         statusText: "OK",
+<<<<<<< HEAD
         data: fixtures.appointments
       });
     }
  // ..............................................................................interviewers
+=======
+        data:fixtures.appointments
+      });
+    }
+
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
     if (url === "/api/interviewers") {
       /* Resolve interviewers data */
       return Promise.resolve({
@@ -84,14 +103,21 @@ export default {
       });
     }
   }),
+<<<<<<< HEAD
   // ..............................................................................put
+=======
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
   put: jest.fn(url => {
     return Promise.resolve({
       status: 204,
       statusText: "No Content"
     })
   }),
+<<<<<<< HEAD
   // ..............................................................................delete
+=======
+
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
   delete: jest.fn(url => {
     return Promise.resolve({
       status: 204,
@@ -100,5 +126,9 @@ export default {
   })
 
 }
+<<<<<<< HEAD
 
+=======
+// ..............................................................................put
+>>>>>>> 970c259351c982565ecf6393e7a546602fbf474d
 
