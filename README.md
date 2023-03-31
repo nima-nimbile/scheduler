@@ -16,7 +16,9 @@ For quality assurance, the project follows best practices of TDD (Test Driven De
 - A user can cancel an existing interview, a pop-up message will ask to confirm the action before permanently deleting an interview
 - Days display currently remaining spots and capture updates after each modification
 
-
+!['Delete'](https://github.com/nima-nimbile/scheduler/blob/master/doc/delete-confirmation.png)
+!['Edit'](https://github.com/nima-nimbile/scheduler/blob/master/doc/edit.png)
+![Main'](https://github.com/nima-nimbile/scheduler/blob/master/doc/main-view.png)
 ## Setup
 
 Install dependencies with `npm install`.
