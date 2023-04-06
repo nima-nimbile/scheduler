@@ -107,7 +107,7 @@ storiesOf("Button", module)
         <InterviewerListItem
         name={interviewer.name}
         avatar={interviewer.avatar} 
-        setInterviewer={() => action("setInterviewer")(interviewer.id)} />
+        setInterviewer={() => action("setInterviewer")} />
     ));
 
     const interviewers = [
@@ -167,7 +167,9 @@ storiesOf("Button", module)
   ))    
   .add('Edit', () => (
     <Form 
+      name="Ed"
       interviewers={interviewers}
+      value={4}
       onSave={action('onSave')}
       onCancel={action('onCancel')}
     />

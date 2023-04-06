@@ -38,16 +38,6 @@ export default function useApplicationData() {
   
   function bookInterview(id, interview) {
 
-    // const appointment = {
-    //   ...state.appointments[id],
-    //   interview: { ...interview }
-    // };
-
-    // const appointments = {
-    //   ...state.appointments,
-    //   [id]: appointment
-    // };
-    
     const url = `/api/appointments/${id}`;
     return axios.put(url, { interview }).then(() => {
       dispatch({ type: SET_INTERVIEW, id: id, interview: interview });
@@ -55,17 +45,6 @@ export default function useApplicationData() {
   }
 
   function cancelInterview(id) {
-
-    // const appointment = {
-    //   ...state.appointments[id],
-    //   interview: null
-    // };
-
-    // const appointments = {
-    //   ...state.appointments,
-    //   [id]: appointment
-    // };
-    
     const url = `/api/appointments/${id}`;
     return axios.delete(url).then(() => {
       dispatch({ type: SET_INTERVIEW, id: id, interview: null });

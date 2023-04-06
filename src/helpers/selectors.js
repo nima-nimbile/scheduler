@@ -37,15 +37,3 @@ export function getInterviewersForDay(state, dayName) {
   );
   return interviewersObj;
 }
-// export function getInterviewersForDay(state, dayName) {
-//   const validDayNames = state.days.map(dayObj => dayObj.name);
-//   if (!dayName || !validDayNames.includes(dayName)) return [];
-
-//   const todayObj = state.days.filter(dayObj => dayObj.name === dayName)[0];
-//   if (!todayObj || !todayObj.interviewers) return [];
-
-//   const interviewersObj = todayObj.interviewers.map(
-//     interId => state.interviewers[interId]
-//   );
-//   return interviewersObj;
-// }
