@@ -123,11 +123,13 @@ storiesOf("Button", module)
       backgrounds: [{ name: "dark", value: "#222f3e", default: true }],
     })
     .add("Initial", () => (
-      <InterviewerList interviewers={interviewers} />
+      <InterviewerList interviewers={interviewers}
+      onChange={action("setInterviewer")}/>
     ))
     .add("Selected", () => (
       <InterviewerList interviewers={interviewers} 
-      value={3}/>
+      interviewer={3}
+      onChange={action("setInterviewer")}/>
     ))
     .add("Clickable", () => (
         <InterviewerList interviewers={interviewers} 
@@ -169,7 +171,7 @@ storiesOf("Button", module)
     <Form 
       name="Ed"
       interviewers={interviewers}
-      value={4}
+      interviewer={interviewers[0].id}
       onSave={action('onSave')}
       onCancel={action('onCancel')}
     />
